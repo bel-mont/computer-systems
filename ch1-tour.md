@@ -21,6 +21,9 @@ of the time that cannot be improved and the time that can be improved.
 ### Speedup computation
 S = 1 / ((1 - a) + a/k)
 
+### Finding k
+k = a / (1/s - (1 - a))
+
 ### Determining a and k
 To determine a and k, we can use the following formulas:
 a = original time spent on the part that can be improved / total original time
@@ -55,7 +58,7 @@ a / k = 1/S - (1 - a)
 k = a / (1 / S - (1 - a))
 
 # Exercises
-## Problem 1.1
+## Problem 1.1 A
 Speedup for the tree is S = 1.25
 
 To reach this value we follow the formula:
@@ -92,7 +95,7 @@ Where `25` is the total initial time,
 
 and `10` is the new time for the improved part.
 
-## Problem 1.2
+## Problem 1.1 B
 To get the required speed to get a speedup of 1.67, we have to reverse the formula to find k,
 from which we can then find the new km/h we need.
 
@@ -119,3 +122,18 @@ Calculate New Speed for Improved Section
 
 **Alternatively, directly calculate Vimproved:**
 `Vimproved = D_improve / Timproved_new = 1,500 km / 4.9701 hours = 301.79 km/hr`
+
+## Problem 1.2
+For this problem, we need to take 90% of the time, and improve it enough
+that the overall system improves 4x (speedup).
+For this, we need to find the value of k, the improvement of this .9 part.
+
+Given:
+a = .9
+S = 4
+
+k = a / (1/s - (1 - a))
+k = .9 / (1/4 - .1)
+k = .9 / (.25 - .1)
+k = .9 / .15
+k = 6
