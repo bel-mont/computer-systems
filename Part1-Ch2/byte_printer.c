@@ -93,5 +93,16 @@ int main() {
 
     printf("\nTesting with zero:\n");
     test_show_bytes(0);
+
+    // mnopqr
+    printf("\nTesting with a string:\n");
+    show_bytes((byte_pointer)"mnopqr", 6);
     return 0;
 }
+
+// 0x12345678
+// int a = 0x12345678;
+// byte_pointer ap = (byte_pointer) &a;
+    // show_bytes(ap, 1); /* A. */ little endian = 78, big endian = 12
+// show_bytes(ap, 2); /* B. */ little endian = 78 56, big endian = 12 34
+// show_bytes(ap, 3); /* C. */ little endian = 78 56 34, big endian = 12 34 56
