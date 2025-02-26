@@ -39,5 +39,13 @@ int main()
     int arr2[] = {1, 2, 3, 4, 5};
     reverse_array(arr2, 5);
     printf("%d %d %d %d %d\n", arr2[0], arr2[1], arr2[2], arr2[3], arr2[4]);
+    // Exercise 2.12
+    const unsigned int x = 0x87654321;
+    printf("A) The least significant byte of x, with all other bits set to 0. %08x\n", x & 0xFF);
+    // Visual representation: 1000 0111, 0110 0101, 0100 0011, 0010 0001
+    // NOT ~:                 0111 1000, 1001 1010, 1011 1100, 1101 1110
+    // XOR ^ 0xFF:            0111 1000, 1001 1010, 1011 1100, (1101 ^ 1111 = 0010, 1110 ^ 1111 = 0001)
+    printf("B) All but the least significant byte of x complemented, with the least significant byte left unchanged. %08x\n", ~x ^ 0xFF);
+    printf("C) The least significant byte set to all ones, and all other bytes of x left un-changed. %08x\n", x | 0xFF);
     return 0;
 }
