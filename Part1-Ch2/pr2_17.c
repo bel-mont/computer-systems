@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <limits.h>
+#include <inttypes.h>
 
 int main () {
   // Using a word size of 4.
@@ -8,5 +10,8 @@ int main () {
   printf("0x2: Binary 0010, B2U: 2 (2), B2T: 2 (2)");
   printf("0x7: Binary 0111, B2U: 7 (4+2+1), B2T: 7 (4+2+1)");
   printf("0xC: Binary 1100, B2U: 12 (8+4), B2T: -4 (-8+4)");
+  const int32_t x = 3;
+  const uint64_t y = 2;
+  printf("x = %" PRId32 ", y = %" PRIu64 "\n", x, y);
   return 0;
 }
