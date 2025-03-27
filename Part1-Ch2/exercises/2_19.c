@@ -16,7 +16,14 @@ int main () {
   printf("\n1 T2U -> { T2B 0111 }-> { 1 } ");
   printf("\n8 T2U -> { T2B 1100 }-> { 8 } ");
 
-  // U2Tw (u) = −u w−12w + u
+  // U2Tw (u) = −u_w-1 * 2^w + u // u_w-1 is the most significant bit
+  // Ex with w = 4, and a value of 14
+  // 14 = 1110
+  // 1 (MSB = 1)
+  // So, -1 * 2^4 + 14
+  // -1 * 16 + 14
+  // -16 + 14
+  // -2
 
   return 0;
 }
